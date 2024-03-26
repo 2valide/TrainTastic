@@ -46,3 +46,26 @@ def randomTrain(request) :
         "nextId": int(randomTrain.trainId) + 1,
     })
 
+
+def AddTrain(request) :
+    if request.method == "POST" :
+        destinations = request.POST['destination']
+        datetime = request.POST['datetime']
+        duration = request.POST['duration']
+        company = request.POST['company']
+        image = request.POST['image']
+        description = request.POST['description']
+        plan = request.POST['plan']
+
+        newTrain = models.trains(
+            destination=destinations,
+            datetime=datetime,
+            duration=duration,
+            company=company,
+            image=image,
+            description=description,
+            plan=plan,
+        )
+        newTrain.save()
+
+    return render(request, "trains/AddTrain.html", {})
