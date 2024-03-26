@@ -1,0 +1,25 @@
+
+$ python manage.py makemigrations
+$ python manage.py migrate
+
+
+
+#Shell >> $ python manage.py shell
+
+$from movies.models import Movies
+
+$ Movies.objects.all()
+
+
+
+
+
+
+$ monNouveauFilm = Movies(1, "Avatar", "Lorem Ipsum","Cameron", 2009)
+$ MonNouveauFilm.title = "Avatar2"
+$ monNouveauFilm.save()
+
+
+
+
+$ python manage.py runserver

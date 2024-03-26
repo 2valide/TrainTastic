@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="content-card">
+            {% for train in trains %}
+                <div class="card">
+                    <h2>{{ train.trainId }}</h2>
+                    <p>{{ train.destination }}</p>
+                    <p>{{ train.datetime }}</p>
+                    {% comment %} <a href="{{ train.link }}">Voir le train</a> {% endcomment %}
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
