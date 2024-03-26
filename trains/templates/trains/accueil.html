@@ -6,15 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'trains/css/accueil.css' %}">
 </head>
 <body>
+    <header>
+
+    </header>
     <main>
         <div class="content-card">
             {% for train in trains %}
                 <div class="card">
                     <h2>{{ train.trainId }}</h2>
-                    <p>{{ train.destination }}</p>
-                    <p>{{ train.datetime }}</p>
+                    <p class="destination">{{ train.destination }}</p>
+                    <p class="horaire">{{ train.datetime }}</p>
                     {% comment %} <a href="{{ train.link }}">Voir le train</a> {% endcomment %}
                 </div>
             {% endfor %}
