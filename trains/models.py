@@ -12,3 +12,4 @@ class trains(models.Model) :
     plan = models.IntegerField()
 
     
+
