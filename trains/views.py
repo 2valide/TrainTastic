@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse, redirect
 from . import models
 import random
-# from django.http import HttpResponse
 
 # Create your views here.
 
@@ -13,6 +12,7 @@ def accueil(request) :
         'trains': list_trains,
     
     })
+
 
 def detailleTrain(request, Idtrain) :
     listTrains = models.trains.objects.get(trainId=Idtrain)
@@ -46,19 +46,20 @@ def randomTrain(request) :
         "nextId": int(randomTrain.trainId) + 1,
     })
 
+def dashboard(request):
+    list_trains = models.trains.objects.all()
 
-def AddTrain(request) :
-    if request.method == "POST" :
-        destinations = request.POST['destination']
+    if request.method == "POST":
+        destination = request.POST['destination']
         datetime = request.POST['datetime']
-        duration = request.POST['duration']
+        duration = int(request.POST['duration'])
         company = request.POST['company']
         image = request.POST['image']
         description = request.POST['description']
-        plan = request.POST['plan']
+        plan = int(request.POST['plan'])
 
-        newTrain = models.trains(
-            destination=destinations,
+        new_train = models.trains(
+            destination=destination,
             datetime=datetime,
             duration=duration,
             company=company,
@@ -66,6 +67,13 @@ def AddTrain(request) :
             description=description,
             plan=plan,
         )
-        newTrain.save()
+        new_train.save()
 
-    return render(request, "trains/AddTrain.html", {})
+    return render(request, "trains/dashboard.html", {
+        "trains": list_trains,
+    })
+
+def deleteTrain(request, Idtrain) :
+    dele = models.trains.objects.get(trainId=Idtrain)
+    dele.delete()
+    return redirect('/trains/dashboard')

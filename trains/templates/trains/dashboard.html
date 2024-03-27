@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DétailleTrain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'trains/css/détailleTrain.css' %}">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="addTrain-box">
+                <h2>Add trains</h2>
+                <form method="post">
+                
+                    {% csrf_token %}
+
+                    <label for="destinations">Destinations</label>
+                    <input type="text" class="field" placeholder="Destination" name="destination">
+                    <label for="datetime">Horaire</label>
+                    <input type="text" class="field" placeholder="Horaire" name="datetime">
+                    <label for="duration">Durée</label>
+                    <input type="text" class="field" placeholder="Durée" name="duration">
+                    <label for="company">Company</label>
+                    <input type="text" class="field" placeholder="Company" name="company">
+                    <label for="image">Image</label>
+                    <input type="text" class="field" placeholder="Image" name="image">
+                    <label for="description">Description</label>
+                    <input type="text" class="field" placeholder="Description" name="description">
+                    <label for="plan">Plan</label>
+                    <input type="text" class="field" placeholder="Plan" name="plan">
+                    <button type="submit" class="btn">Add Train</button>
+                </form> 
+            </div>
+            <div class="container">
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Train ID</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Horaire</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        <tbody>
+                        {% for train in trains %}
+                            <tr>
+                                <td> {{ train.trainId }} </td>
+                                <td> {{ train.destination }} </td>
+                                <td> {{ train.datetime }} </td>
+                                <td> 
+                                <a class="btn btn-danger" href="{% url 'deleteTrain' Idtrain=train.trainId %}"> Delete </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
