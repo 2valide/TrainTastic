@@ -67,20 +67,16 @@
                 
                     {% csrf_token %}
 
-                    <label for="destinations">Destinations</label>
-                    <input type="text" class="field" placeholder="Destination" name="destination">
                     <label for="datetime">Horaire</label>
-                    <input type="text" class="field" placeholder="Horaire" name="datetime">
-                    <label for="duration">Durée</label>
-                    <input type="text" class="field" placeholder="Durée" name="duration">
+                    <input type="text" class="field" placeholder="Horaire" name="datetime" required>
+                    <label for="destinations">Destinations</label>
+                    <input type="text" class="field" placeholder="Destination" name="destination" required>
                     <label for="company">Company</label>
-                    <input type="text" class="field" placeholder="Company" name="company">
-                    <label for="image">Image</label>
-                    <input type="text" class="field" placeholder="Image" name="image">
-                    <label for="description">Description</label>
-                    <input type="text" class="field" placeholder="Description" name="description">
-                    <label for="plan">Plan</label>
-                    <input type="text" class="field" placeholder="Plan" name="plan">
+                    <input type="text" class="field" placeholder="Company" name="company"required>
+                    <label for="duration">Durée</label>
+                    <input type="number" class="field" placeholder="Durée" name="duration" min=1 required>
+                    {% comment %} <label for="plan">Plan</label>
+                    <input type="text" class="field" placeholder="Plan" name="plan"> {% endcomment %}
                     <button type="submit" class="btn btn-success">Add Train</button>
                 </form> 
             </div>
@@ -91,7 +87,9 @@
                             <tr>
                                 <th scope="col">Train ID</th>
                                 <th scope="col">Destination</th>
+                                <th scope="col">Company</th>
                                 <th scope="col">Horaire</th>
+                                <th scope="col">Durée</th>
                                 <th scope="col">Delete</th>
                             </tr>
                         <tbody>
@@ -99,7 +97,9 @@
                             <tr>
                                 <td> {{ train.trainId }} </td>
                                 <td> {{ train.destination }} </td>
+                                <td> {{ train.company }} </td>
                                 <td> {{ train.datetime }} </td>
+                                <td> {{ train.duration }}H </td>
                                 <td> 
                                 <a class="btn btn-danger" href="{% url 'deleteTrain' Idtrain=train.trainId %}"> Delete </a>
                                 </td>
@@ -108,7 +108,7 @@
                         </tbody>
                     </table>
                 </div>
-        </div>
+            </div>
         </div>
     </main>
     <!-- bootstrap js -->

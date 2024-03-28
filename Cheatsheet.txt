@@ -23,3 +23,25 @@ $ monNouveauFilm.save()
 
 
 $ python manage.py runserver
+
+
+Grenoble = trains(datetime="09h00", destination="Grenoble", company="Ouigo", duration=2).save()
+Rennes = trains(datetime="16h45", destination="Rennes", company="SNCF", duration=3).save()
+Montpellier = trains(datetime="14h30", destination="Montpellier", company="TER", duration=2).save()
+Dijon = trains(datetime="11h20", destination="Dijon", company="TGV", duration=4).save()
+Angers = trains(datetime="08h55", destination="Angers", company="Thalys", duration=5).save()
+Reims = trains(datetime="13h15", destination="Reims", company="Ouigo", duration=3).save()
+Cannes = trains(datetime="10h40", destination="Cannes", company="SNCF", duration=2).save()
+Nancy = trains(datetime="15h10", destination="Nancy", company="TER", duration=4).save()
+Metz = trains(datetime="18h30", destination="Metz", company="TGV", duration=2).save()
+Le_Mans = trains(datetime="12h50", destination="Le Mans", company="Thalys", duration=3).save()
+Perpignan = trains(datetime="09h25", destination="Perpignan", company="Ouigo", duration=1).save()
+Brest = trains(datetime="17h55", destination="Brest", company="SNCF", duration=4).save()
+Limoges = trains(datetime="15h40", destination="Limoges", company="TER", duration=2).save()
+Avignon = trains(datetime="11h00", destination="Avignon", company="TGV", duration=5).save()
+Besançon = trains(datetime="14h20", destination="Besançon", company="Ouigo", duration=3).save()
+Nîmes = trains(datetime="10h15", destination="Nîmes", company="SNCF", duration=2).save()
+Amiens = trains(datetime="16h00", destination="Amiens", company="TER", duration=4).save()
+Caen = trains(datetime="13h30", destination="Caen", company="TGV", duration=2).save()
+Le_Havre = trains(datetime="08h45", destination="Le Havre", company="Thalys", duration=3).save()
+Pau = trains(datetime="11h35", destination="Pau", company="Ouigo", duration=1).save()

@@ -1,19 +1,85 @@
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+
+}
+
 .content-card {
     display: flex;
     flex-direction: column;
+    margin-left: 33%;
+    margin-top: 10px;
 
 }
 
-.card {
+.card, a {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-height: 5.5vh;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: space-around; */
     border: 1px solid #e0e0e0;
+
     max-width: 700px;
+    min-height: 10vh;
+
+    text-decoration: none;
 }
 
-.card h2 {
+
+.horaire {
+
+    max-width: 5vw;
+    width: 100%;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+
+.info {
+
+    max-width: 30vw;
+    width: 100%;
+    position: relative;
+    left: 79px;
+    top: 25px;
+}
+
+.info .destination {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.info .train {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.duree {
+
+    max-width: 5vw;
+    width: 100%;
+    line-height: 29px;
+    font-size: 36px;
+    font-weight: 600;
+} 
+
+.horaire, .duree, .arrow {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+
+
+/* .card h2 {
     min-width: 50px;
 }
 
@@ -34,3 +100,5 @@
 
 
 }
+*/
+

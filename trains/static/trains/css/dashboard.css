@@ -9,6 +9,7 @@ html body {
     border: 1px solid black;
     max-width: 35vw;
     margin-top: 10vh;
+    max-height: 33vh;
 
 }
 
@@ -40,6 +41,8 @@ html body {
     max-width: 35vw;
     min-width: 35vw;
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column-reverse;
     /* float: right;
     position: relative;
     bottom: 63.6vh; */

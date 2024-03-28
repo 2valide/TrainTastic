@@ -20,11 +20,10 @@ def detailleTrain(request, Idtrain) :
 
     return render(request, "trains/detailleTrain.html", {
         "ID": detailTrain.trainId,
-        "destination": detailTrain.destination,
         "datetime": detailTrain.datetime,
-        "duration": detailTrain.duration,
+        "destination": detailTrain.destination,
         "company": detailTrain.company,
-        "image": detailTrain.image,
+        "duration": detailTrain.duration,
 
         "nextId": int(Idtrain) + 1,
     })
@@ -37,11 +36,10 @@ def randomTrain(request) :
 
     return render(request, "trains/detailleTrain.html", {
         "ID": randomTrain.trainId,
-        "destination": randomTrain.destination,
         "datetime": randomTrain.datetime,
-        "duration": randomTrain.duration,
+        "destination": randomTrain.destination,
         "company": randomTrain.company,
-        "image": randomTrain.image,
+        "duration": randomTrain.duration,
 
         "nextId": int(randomTrain.trainId) + 1,
     })
@@ -54,18 +52,12 @@ def dashboard(request):
         datetime = request.POST['datetime']
         duration = int(request.POST['duration'])
         company = request.POST['company']
-        image = request.POST['image']
-        description = request.POST['description']
-        plan = int(request.POST['plan'])
 
         new_train = models.trains(
             destination=destination,
             datetime=datetime,
             duration=duration,
             company=company,
-            image=image,
-            description=description,
-            plan=plan,
         )
         new_train.save()
 
