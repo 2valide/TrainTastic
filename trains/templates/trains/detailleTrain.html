@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,14 +63,14 @@
     <main>
         <div class="under-header">
             <div class="container">
-                <h1><span><button>Retour</button></span>Train {{ company }} | N°{{ ID }}</h1>
+                <span><a href="{% url 'accueil' %}"><button>Retour</button></a></span>
+                <h1>Train {{ company }} | N°{{ ID }}</h1>
             </div>
         </div>
-        <div class="content-card">
-                <div class="card">
-                    <h2>{{ ID }}</h2>
-                    <p class="destination">{{ destination }}</p>
-                    <p class="horaire">{{ datetime }}</p>
+        <div class="content-card container d-flex ">
+                <div class="card container">
+                    <h2>En direction de {{ destination }} - Départ à {{ datetime }}</h2>
+                    <span><img src="{% static 'trains/img/' %}{{ randomplan }}.webp" alt=""></span>
                     
                 </div>
         </div>

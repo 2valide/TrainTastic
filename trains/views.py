@@ -26,6 +26,7 @@ def detailleTrain(request, Idtrain) :
         "duration": detailTrain.duration,
 
         "nextId": int(Idtrain) + 1,
+        "randomplan" : int(random.randint(1, 6)),
     })
 
 def randomTrain(request) :
@@ -42,6 +43,7 @@ def randomTrain(request) :
         "duration": randomTrain.duration,
 
         "nextId": int(randomTrain.trainId) + 1,
+        "randomplan" : int(random.randint(1, 16)),
     })
 
 def dashboard(request):
