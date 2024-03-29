@@ -71,3 +71,13 @@ def deleteTrain(request, Idtrain) :
     dele = models.trains.objects.get(trainId=Idtrain)
     dele.delete()
     return redirect('/trains/dashboard')
+
+
+def rechercheFiltrer(request):
+    zoneDeRecherche = request.GET.get('zoneDeRecherche', '')
+    results = []
+
+    if zoneDeRecherche:
+        results = models.trains.objects.filter(destination__icontains=zoneDeRecherche)
+
+    return render(request, 'trains/rechercheFiltrer.html', {'results': results, 'zoneDeRecherche': zoneDeRecherche})

@@ -9,6 +9,7 @@ urlpatterns = [
     path('randomTrain/', views.randomTrain, name='randomTrain'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('deleteTrain/<int:Idtrain>/', views.deleteTrain, name='deleteTrain'),
+    path('rechercheFiltrer/', views.rechercheFiltrer, name='rechercheFiltrer'),
     # path('admin/', admin.site.urls),
 ]
 
