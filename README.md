@@ -27,7 +27,7 @@ TrainInfo est un projet Python Django conçu pour afficher des informations sur 
 
 Ajoutez ici des captures d'écran de votre application pour illustrer son fonctionnement.
 
-![Capture d'écran 1](chemin/vers/capture1.png)
+![Capture d'écran 1](imgReade/accueil.png)
 *Description de la capture d'écran 1.*
 
 ![Capture d'écran 2](chemin/vers/capture2.png)
