@@ -32,7 +32,3 @@ Ajoutez ici des captures d'écran de votre application pour illustrer son foncti
 
 ![Capture d'écran 2](chemin/vers/capture2.png)
 *Description de la capture d'écran 2.*
-
-## Licence
-
-Ce projet est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
