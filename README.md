@@ -30,5 +30,14 @@ Ajoutez ici des captures d'écran de votre application pour illustrer son foncti
 ![Capture d'écran 1](imgReadMe/accueil.png)
 *Description de la capture d'écran 1.*
 
-![Capture d'écran 2](chemin/vers/capture2.png)
+![Capture d'écran 2](imgReadMe/details.png)
 *Description de la capture d'écran 2.*
+
+![Capture d'écran 2](imgReadMe/dashboard.png)
+*Description de la capture d'écran 3.*
+
+![Capture d'écran 2](imgReadMe/accueil.png)
+*Description de la capture d'écran 4.*
+
+![Capture d'écran 2](imgReadMe/accueil.png)
+*Description de la capture d'écran 5.*
