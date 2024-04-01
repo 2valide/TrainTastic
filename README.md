@@ -19,7 +19,7 @@ TrainInfo est un projet Python Django conçu pour afficher des informations sur 
     ```
 5. Accédez à l'application dans votre navigateur Web à l'adresse suivante :
     ```
-    http://localhost:8000/Trains/accueil
+    http://localhost:8000/trains/accueil/
     ```
 6. Explorez les différentes fonctionnalités pour afficher les informations sur les trains, y compris les horaires, les destinations et les identifiants de train, ainsi que le plan.
 
