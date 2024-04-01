@@ -80,11 +80,14 @@
                 <h1>Train {{ company }} | N°{{ ID }}</h1>
             </div>
         </div>
-        <div class="content-card container d-flex ">
+        <div class="content-card container d-flex flex-column contenaire">
                 <div class="card container">
                     <h2>En direction de {{ destination }} - Départ à {{ datetime }}</h2>
                     <span><img src="{% static 'trains/img/' %}{{ randomplan }}.webp" alt=""></span>
-                    
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="http://localhost:8000/trains/detailleTrain/{{ prevId }}"><button class="btn btn-outline-secondary">Précédent</button></a>
+                    <a href="http://localhost:8000/trains/detailleTrain/{{ nextId }}"><button class="btn btn-outline-secondary">Suivant</button></a>
                 </div>
         </div>
     </main>

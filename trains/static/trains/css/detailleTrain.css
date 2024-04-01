@@ -39,3 +39,22 @@ body {
     font-family: "Rubik", sans-serif;
     margin: 20px 0 20px 0;
 }
+
+.card {
+    border: 0;
+}
+
+.card .btn {
+
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 auto;
+    display: block;
+}
+
+.contenaire {
+    gap: 5rem;
+}

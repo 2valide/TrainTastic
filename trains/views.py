@@ -26,6 +26,7 @@ def detailleTrain(request, Idtrain) :
         "duration": detailTrain.duration,
 
         "nextId": int(Idtrain) + 1,
+        "prevId": int(Idtrain) - 1,
         "randomplan" : int(random.randint(1, 6)),
     })
 
