@@ -1,6 +1,6 @@
 # TrainTastic
 
-TrainInfo est un projet Python Django conçu pour afficher des informations sur les trains, y compris les horaires, les destinations et les identifiants de train, ainsi qu'un plan.
+TrainTastic est un projet Python Django conçu pour afficher des informations sur les trains, y compris les horaires, les destinations et les identifiants de train, ainsi qu'un plan.
 
 ## Utilisation
 
