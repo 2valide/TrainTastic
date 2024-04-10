@@ -4,6 +4,7 @@ import random
 
 # Create your views here.
 
+
 def accueil(request) :
     # return HttpResponse("Hello World")
     list_trains = models.trains.objects.all()

@@ -13,22 +13,22 @@ html body {
 
 }
 
-.form-container form{
+.form-container form {
 
     display: flex;
     flex-direction: column;
     /* align-items: center; */
 }
 
-.form-container form input{
+.form-container form input {
 
     margin: 1vh;
     margin-left: 0;
-    width:auto;
+    width: auto;
 
 }
 
-.form-container form button{
+.form-container form button {
 
     max-width: 10vw;
     margin: 0 auto;
@@ -57,9 +57,5 @@ html body {
     padding: 10px;
     text-align: center;
     font-size: 20px;
-    
+
 }
-
-
-
-

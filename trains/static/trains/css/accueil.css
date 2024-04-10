@@ -5,6 +5,8 @@ html body {
 
 }
 
+/* card */
+
 .content-card {
     display: flex;
     flex-direction: column;
@@ -13,7 +15,8 @@ html body {
 
 }
 
-.card, a {
+.card,
+a {
     display: flex;
     flex-direction: row;
     /* align-items: center; */
@@ -34,8 +37,10 @@ html body {
     line-height: 32px;
     font-size: 24px;
     font-weight: 600;
-    
+
 }
+
+
 
 .info {
 
@@ -66,15 +71,17 @@ html body {
     line-height: 29px;
     font-size: 36px;
     font-weight: 600;
-} 
+}
 
-.horaire, .duree, .arrow {
+.horaire,
+.duree,
+.arrow {
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
+
 }
 
 
@@ -101,4 +108,3 @@ html body {
 
 }
 */
-
